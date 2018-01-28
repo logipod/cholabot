@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>TwiML App</display-name>
+
+	<servlet>
+		<servlet-name>InboundServlet</servlet-name>
+		<servlet-class>com.servion.etso.ivr.servlet.InboundServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>InboundServlet</servlet-name>
+		<url-pattern>/hindi</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SpeechServlet</servlet-name>
+		<servlet-class>com.servion.etso.ivr.servlet.SpeechServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SpeechServlet</servlet-name>
+		<url-pattern>/ivr</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AuthServlet</servlet-name>
+		<servlet-class>com.servion.etso.ivr.servlet.AuthServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AuthServlet</servlet-name>
+		<url-pattern>/auth</url-pattern>	
+	</servlet-mapping>
+</web-app>
